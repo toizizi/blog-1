@@ -9,8 +9,12 @@ body {
     color: #fff;
     font-family: "Microsoft YaHei", sans-serif;
     overflow-x: hidden;
+    font-family: TEXT;
 }
-
+@font-face {
+            font-family: TEXT;
+            src: url(./img/diandianxiangsutiyuanxing.ttf);
+        }
 #bei-jing-hua-bu {
     position: fixed;
     top: 0;
