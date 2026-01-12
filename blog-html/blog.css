@@ -7,14 +7,16 @@ body {
     padding: 0;
     background-color: #000000;
     color: #fff;
-    font-family: "Microsoft YaHei", sans-serif;
+    font-family: TEXT, "Microsoft YaHei", sans-serif;
     overflow-x: hidden;
-    font-family: TEXT;
 }
+
 @font-face {
-            font-family: TEXT;
-            src: url(./img/diandianxiangsutiyuanxing.ttf);
-        }
+    font-family: TEXT;
+    src: url(./img/diandianxiangsutiyuanxing.ttf);
+    font-display: block;
+}
+
 #bei-jing-hua-bu {
     position: fixed;
     top: 0;
@@ -193,15 +195,33 @@ p {
     opacity: 0.8;
     text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
 }
+#pian-duan .nei-rong-qia-pian {
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    animation: none;
+    max-width: 800px;
+    text-align: left;
+    padding: 0;
+}
 
 .pian-duan-ka-pian {
-    padding: 25px 0;
+    font-size: 16px;
+    padding: 26px 0;
     text-align: left;
     transition: background 0.3s;
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .pian-duan-ka-pian:hover {
-    background: rgba(255, 255, 255, 0.02);
+    background: transparent;
+    color: #fff;
+}
+
+.pian-duan-ka-pian:hover p {
+    color: #fff;
 }
 
 .pian-duan-ri-qi {

@@ -1,0 +1,161 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #fff;
+    font-family: TEXT, "Microsoft YaHei", sans-serif;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+body.jia-zai-wan-cheng {
+    opacity: 1;
+}
+
+body.tui-chu-dong-hua {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+@font-face {
+    font-family: TEXT;
+    src: url(../img/diandianxiangsutiyuanxing.ttf);
+    font-display: block;
+}
+
+#bei-jing-hua-bu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.huan-xing-hu-xi-guang-yun {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 80vw;
+    height: 80vh;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(20, 20, 30, 0.4) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 2;
+    pointer-events: none;
+    animation: hu-xi-dong-hua 8s ease-in-out infinite alternate;
+}
+
+@keyframes hu-xi-dong-hua {
+    0% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.zhu-ti-nei-rong {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.wen-zhang-rong-qi {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 150px 40px 80px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body.jia-zai-wan-cheng .wen-zhang-rong-qi {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.fan-hui-an-niu {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 10px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #888;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 14px;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.fan-hui-an-niu:hover {
+    border-color: #fff;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(-5px);
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 100;
+    letter-spacing: 5px;
+    margin: 0 0 20px 0;
+    opacity: 0.9;
+}
+
+.wen-zhang-ri-qi {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 60px;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+.wen-zhang-nei-rong {
+    color: #999;
+    line-height: 2.4;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.wen-zhang-nei-rong p {
+    margin-bottom: 30px;
+    color: #999;
+}
+
+.wen-zhang-nei-rong p:hover {
+    color: #ccc;
+}
+
+.gao-liang {
+    color: #fff;
+    font-weight: 400;
+}
+
+.fen-ge-xian {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin: 60px 0;
+}
+
+.wen-zhang-jie-wei {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.wen-zhang-jie-wei p {
+    color: #666;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
